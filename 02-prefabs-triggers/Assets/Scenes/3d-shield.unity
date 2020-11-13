@@ -1095,6 +1095,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230409712362462351, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 230409713595087536, guid: 55e3eeec25eab804e899b465184ebca6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1155,6 +1160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 230409713595087539, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 230409713595087543, guid: 55e3eeec25eab804e899b465184ebca6,
         type: 3}
       propertyPath: m_Enabled
@@ -1166,6 +1176,47 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 230409713595087539, guid: 55e3eeec25eab804e899b465184ebca6,
         type: 3}
+    - target: {fileID: 230409713595087543, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: minTimeBetweenSpawns
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713595087543, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: maxTimeBetweenSpawns
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 9.732912
+      objectReference: {fileID: 0}
+    - target: {fileID: 230409713693856276, guid: 55e3eeec25eab804e899b465184ebca6,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 3.4839497
+      objectReference: {fileID: 0}
     - target: {fileID: 230409713693856282, guid: 55e3eeec25eab804e899b465184ebca6,
         type: 3}
       propertyPath: m_Mesh
