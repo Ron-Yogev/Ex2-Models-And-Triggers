@@ -9,31 +9,27 @@ public class ShieldThePlayer : MonoBehaviour {
 
         if (other.tag == "Player") {
             Debug.Log("Shield triggered by player");
-
-            GameObject shield = GameObject.FindGameObjectWithTag("temp_shield");
-            Color tmp = shield.GetComponent<MeshRenderer>().material.color;
-            shield.GetComponent<MeshRenderer>().material.color = new Color(tmp.r, tmp.g, tmp.b, 150f/256f);
+            GameObject shield = GameObject.FindGameObjectWithTag("Shield");
+            shield.SetActive(false);
+            GameObject temp_shield = GameObject.FindGameObjectWithTag("temp_shield");
+            Color tmp = temp_shield.GetComponent<MeshRenderer>().material.color;
+            temp_shield.GetComponent<MeshRenderer>().material.color = new Color(tmp.r, tmp.g, tmp.b, 150f/256f);
             Debug.Log("tmp:" + tmp);
-            Debug.Log("shield:" + shield.GetComponent<MeshRenderer>().material.color);
+            Debug.Log("temp_shield:" + temp_shield.GetComponent<MeshRenderer>().material.color);
             var destroyComponent = other.GetComponent<DestroyOnTrigger2D>();
             if (destroyComponent) {
-                destroyComponent.StartCoroutine(ShieldTemporarily(destroyComponent,shield));
-                // NOTE: If you just call "StartCoroutine", then it will not work, 
-                //       since the present object is destroyed!
-                //Destroy(gameObject);  // Destroy the shield itself - prevent double-use
-                //this.enabled = false;
-
-
+                destroyComponent.StartCoroutine(ShieldTemporarily(destroyComponent, temp_shield, shield));
             }
-        } else {
+        } 
+        else {
             Debug.Log("Shield triggered by "+other.name);
         }
        
    
     }
 
-    private IEnumerator ShieldTemporarily(DestroyOnTrigger2D destroyComponent, GameObject shield) {
-        MeshRenderer other = shield.GetComponent<MeshRenderer>();
+    private IEnumerator ShieldTemporarily(DestroyOnTrigger2D destroyComponent, GameObject temp_shield, GameObject shield) {
+        MeshRenderer other = temp_shield.GetComponent<MeshRenderer>();
         Color origcolor = other.material.color- new Color(0, 0, 0, 150f/256f); ;
         destroyComponent.enabled = false;
         float jump = 150f / (duration * 5f * 256f);
@@ -48,5 +44,7 @@ public class ShieldThePlayer : MonoBehaviour {
 
         other.material.color = origcolor;
         destroyComponent.enabled = true;
+        shield.SetActive(true);
+
     }
 }
