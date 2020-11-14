@@ -10,7 +10,7 @@ public class ShieldThePlayer : MonoBehaviour {
         if (other.tag == "Player") {
             Debug.Log("Shield triggered by player");
             GameObject shield = GameObject.FindGameObjectWithTag("Shield");
-            shield.SetActive(false);
+            Destroy(shield.gameObject);
             GameObject temp_shield = GameObject.FindGameObjectWithTag("temp_shield");
             Color tmp = temp_shield.GetComponent<MeshRenderer>().material.color;
             temp_shield.GetComponent<MeshRenderer>().material.color = new Color(tmp.r, tmp.g, tmp.b, 150f/256f);
@@ -44,7 +44,7 @@ public class ShieldThePlayer : MonoBehaviour {
 
         other.material.color = origcolor;
         destroyComponent.enabled = true;
-        shield.SetActive(true);
+        //shield.SetActive(true);
 
     }
 }

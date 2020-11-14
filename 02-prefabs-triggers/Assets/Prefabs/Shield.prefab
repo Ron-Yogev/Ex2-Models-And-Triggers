@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 230409713595087536}
   - component: {fileID: 230409713595087542}
   - component: {fileID: 230409713595087537}
-  - component: {fileID: 230409713595087543}
+  - component: {fileID: -2776839648612430007}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Shield
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
---- !u!114 &230409713595087543
+--- !u!114 &-2776839648612430007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,13 +152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 230409713595087539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e828e62c13db6848bc2cade877f3a31, type: 3}
+  m_Script: {fileID: 11500000, guid: bbbd4e1822f357e4a8453943fa481992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenSpawns: 1
-  maxTimeBetweenSpawns: 3
-  MinMaxSpawnPosX: 8
-  MinMaxSpawnPosY: 5
+  duration: 5
 --- !u!1 &230409713693856278
 GameObject:
   m_ObjectHideFlags: 0
