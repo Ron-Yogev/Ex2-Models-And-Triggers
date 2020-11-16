@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- * This class is represent the horizontal spherical game world
+/**
+ * This component is represent the horizontal spherical game world
  */
 public class HorizontalSphere : MonoBehaviour
 {
@@ -25,13 +25,13 @@ public class HorizontalSphere : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-
             Vector3 pos = player.transform.position;
-            //if the player is in the left side of the screen move it to the left
+            //if the player is in the right side of the screen move it to the left
             if (pos.x > 0)
             {
                 player.transform.position = new Vector3(-1* pos.x +objectWidth, pos.y , pos.z);
             }
+            //if the player is in the left side of the screen move it to the right
             else
             {
                 player.transform.position = new Vector3(-1* pos.x - objectWidth, pos.y , pos.z);

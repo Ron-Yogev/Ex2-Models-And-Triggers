@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * This component sets an object a camera boundaries he cant pass
+ */
 public class boundaries : MonoBehaviour
 {
+    // camera height and weight
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;

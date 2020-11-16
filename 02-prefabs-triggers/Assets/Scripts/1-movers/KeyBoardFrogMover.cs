@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * This component represt the frog movement in our game, 
+ * NOTE: up and down with fixed steps, right and left with fixed speed
+ */
 public class KeyBoardFrogMover : MonoBehaviour
 {
-    Vector3 pos;
+    [Tooltip("The number of steps each click up and down does")]
     [SerializeField] float upDownSteps = 3f;
+    [Tooltip("The speed of the frog right and left click")]
     [SerializeField] float LeftRightSpeed = 3f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        pos = transform.position;
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //moving the frog due to the arrows keys
         if (Input.GetKey("right"))
         {
             transform.position += new Vector3(Time.deltaTime * LeftRightSpeed, 0, 0);

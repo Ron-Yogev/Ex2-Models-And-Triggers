@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * This component should spawn a selected prefab in fixed time
+ */
 public class TimedSpawnerRandom: MonoBehaviour {
     [SerializeField] Mover prefabToSpawn;
     [SerializeField] Vector3 velocityOfSpawnedObject;
@@ -15,12 +18,15 @@ public class TimedSpawnerRandom: MonoBehaviour {
 
     private IEnumerator SpawnRoutine() {
         while (true) {
+            //secaond waiting between spawns
             float timeBetweenSpawns = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
             yield return new WaitForSeconds(timeBetweenSpawns);
+            //setting the position of the spawn
             Vector3 positionOfSpawnedObject = new Vector3(
                 transform.position.x + Random.Range(-maxXDistance, +maxXDistance),
                 transform.position.y,
                 transform.position.z);
+            //spawning the selected prefab
             GameObject newObject = Instantiate(prefabToSpawn.gameObject, positionOfSpawnedObject, Quaternion.identity);
             newObject.GetComponent<Mover>().SetVelocity(velocityOfSpawnedObject);
         }
