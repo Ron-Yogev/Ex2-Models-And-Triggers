@@ -30,6 +30,10 @@ A script for equip the spaceship with a shield and make a reflection for the shi
 
 <https://github.com/Ron-Yogev/Ex2-Models-And-Triggers/blob/master/02-prefabs-triggers/Assets/Scripts/3-collisions/ShieldThePlayer.cs>
 
+A script that describes the number of life points a player has:
+
+<https://github.com/Ron-Yogev/Ex2-Models-And-Triggers/blob/master/02-prefabs-triggers/Assets/Scripts/4-levels/LifesLost.cs>
+
 
 ### Boundaries Implementation
 ---
@@ -44,6 +48,11 @@ In the second game we dealt with types of boundaries:
 ![](images/visible%20boundaries.jpeg)
 
 ##### Here are some references to the code:
+
+A script that takes the height and weight of the camera and object and restricts the player from going out of the world:
+
+<https://github.com/Ron-Yogev/Ex2-Models-And-Triggers/blob/master/02-prefabs-triggers/Assets/Scripts/3-collisions/boundaries.cs>
+
 ___
 
 ##### 2. A flat world with invisible boundaries.
