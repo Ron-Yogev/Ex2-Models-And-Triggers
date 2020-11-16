@@ -10,6 +10,12 @@ TagManager:
   - shield
   - Shield
   - temp_shield
+  - Frog
+  - WinLine
+  - Car
+  - Life1
+  - Life2
+  - Life3
   layers:
   - Default
   - TransparentFX

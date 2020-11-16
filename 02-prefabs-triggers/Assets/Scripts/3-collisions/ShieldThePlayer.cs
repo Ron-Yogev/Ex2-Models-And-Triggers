@@ -16,7 +16,7 @@ public class ShieldThePlayer : MonoBehaviour {
             temp_shield.GetComponent<MeshRenderer>().material.color = new Color(tmp.r, tmp.g, tmp.b, 150f/256f);
             Debug.Log("tmp:" + tmp);
             Debug.Log("temp_shield:" + temp_shield.GetComponent<MeshRenderer>().material.color);
-            var destroyComponent = other.GetComponent<DestroyOnTrigger2D>();
+            var destroyComponent = other.GetComponent<LifesLost>();
             if (destroyComponent) {
                 destroyComponent.StartCoroutine(ShieldTemporarily(destroyComponent, temp_shield, shield));
             }
@@ -28,7 +28,7 @@ public class ShieldThePlayer : MonoBehaviour {
    
     }
 
-    private IEnumerator ShieldTemporarily(DestroyOnTrigger2D destroyComponent, GameObject temp_shield, GameObject shield) {
+    private IEnumerator ShieldTemporarily(LifesLost destroyComponent, GameObject temp_shield, GameObject shield) {
         MeshRenderer other = temp_shield.GetComponent<MeshRenderer>();
         Color origcolor = other.material.color- new Color(0, 0, 0, 150f/256f); ;
         destroyComponent.enabled = false;
@@ -44,7 +44,5 @@ public class ShieldThePlayer : MonoBehaviour {
 
         other.material.color = origcolor;
         destroyComponent.enabled = true;
-        //shield.SetActive(true);
-
     }
 }

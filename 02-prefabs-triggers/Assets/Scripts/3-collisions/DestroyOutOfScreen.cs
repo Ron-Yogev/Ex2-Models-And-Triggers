@@ -6,7 +6,7 @@ public class DestroyOutOfScreen : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Laser" || other.tag == "Enemy")
         {
             Destroy(other.gameObject);
         }
