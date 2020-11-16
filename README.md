@@ -16,10 +16,10 @@ Moreover, at the top right of the screen will be his life points (3 hearts) - so
 
 ##### Here are some screenshots from the game described:
 
+![](images/before%20shield.jpeg)
 
 
-
-
+![](images/after%20shield.jpeg)
 
 
 
@@ -39,6 +39,10 @@ In the second game we dealt with types of boundaries:
 
 ##### 1. A flat world with visible boundaries that cannot be crossed
 
+##### Here are some screenshots from the game described:
+
+![](images/visible%20boundaries.jpeg)
+
 ##### Here are some references to the code:
 ___
 
@@ -50,6 +54,13 @@ When enemies pass the bottom of the screen, they are destroyed, and when the las
 ___
 
 ##### 3. Round World - When the player reaches one side of the world, he appears on the other side.
+
+##### Here are some screenshots from the game described:
+
+
+![](images/circular%20world.jpeg)
+
+![](images/circular%20world%202.jpeg)
 
 ##### Here are some references to the code:
 
@@ -71,11 +82,11 @@ There are 3 lanes so that in each lane cars travel in both directions at random 
 
 ##### Here are some screenshots from the game described:
 
+![](images/ques%203.jpeg)
 
+![](images/win.jpeg)
 
-
-
-
+![](images/game%20over.jpeg)
 
 
 
