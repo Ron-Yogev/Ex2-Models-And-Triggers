@@ -5,7 +5,7 @@ using UnityEngine;
 /**
  * This component destroys a gameobject after a duration secaonds
  */
-public class DestroySpawner : MonoBehaviour
+public class DestroySpawnerAfterDuration : MonoBehaviour
 {
     [Tooltip("The secaonds the object will last till he will destroy")]
     [SerializeField] float duration = 5f;

@@ -7,7 +7,7 @@ using UnityEngine;
  */
 public class LifesLost : MonoBehaviour
 {
-    [Tooltip("prefab we mesh text of gameover")]
+    [Tooltip("prefab mesh text of gameover")]
     [SerializeField] GameObject gameover;
     //he got 3 lifes(if we count from 0 its 2)
     private float lifes = 2f;
