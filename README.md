@@ -24,13 +24,13 @@ Moreover, at the top right of the screen will be his life points (3 hearts) - so
 
 
 
-##### Here are some references to the code:
+##### Here are some references to the changed code:
 
 A script for equip the spaceship with a shield and make a reflection for the shield:
 
 <https://github.com/Ron-Yogev/Ex2-Models-And-Triggers/blob/master/02-prefabs-triggers/Assets/Scripts/3-collisions/ShieldThePlayer.cs>
 
-A script that describes the number of life points a player has:
+A script we added that describes the number of life points a player has:
 
 <https://github.com/Ron-Yogev/Ex2-Models-And-Triggers/blob/master/02-prefabs-triggers/Assets/Scripts/4-levels/LifesLost.cs>
 
